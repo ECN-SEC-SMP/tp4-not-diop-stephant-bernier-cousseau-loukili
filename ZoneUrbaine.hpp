@@ -1,15 +1,17 @@
+#include "Parcelle.hpp"
+
 #ifndef ZONEURBAINE_HPP
 #define ZONEURBAINE_HPP
 
 // Classe zone urbaine (ZU). Une ZU est une parcelle déjà parteillement (ou totalement) construite.
-class ZoneUrbaine : public Parcelle
+class ZoneUrbaine : public Parcelle, public Constructible
 {
 public:
     // Paramètres
     float surfaceConstruite;
 
     // Constructeurs
-    ZoneUrbaine();
+    ZoneUrbaine(Parcelle zone);
     ZoneUrbaine(float surfaceConstruite);
 
     // Accesseurs
@@ -19,7 +21,7 @@ public:
     void setSurfaceConstruite(float surface);
 
     // Méthodes
-    float SurfaceConstructible(float surface);
+    float SurfaceConstructible(Polygone zone);
 };
 
 #endif
