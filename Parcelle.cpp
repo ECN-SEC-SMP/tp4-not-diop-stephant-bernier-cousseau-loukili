@@ -14,7 +14,7 @@ std::string Parcelle::getProprietaire() {
     return proprietaire;
 }
 float Parcelle::getSurface() {
-    return forme.surface();
+    return forme.getSurface();
 }
 
 const Polygone<int>& Parcelle::getForme() const {
