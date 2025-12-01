@@ -1,3 +1,5 @@
+#include "Polygone.hpp"
+#include "Constructible.h"
 #include "Parcelle.hpp"
 
 #ifndef ZONEURBAINE_HPP
@@ -11,7 +13,7 @@ public:
     float surfaceConstruite;
 
     // Constructeurs
-    ZoneUrbaine(Parcelle zone);
+    ZoneUrbaine(Polygone zone);
     ZoneUrbaine(float surfaceConstruite);
 
     // Accesseurs
