@@ -1,4 +1,4 @@
-#include "Polygone.h"
+#include "Polygone.hpp"
 #include <iostream>
 #include <cmath> // Pour std::abs
 
