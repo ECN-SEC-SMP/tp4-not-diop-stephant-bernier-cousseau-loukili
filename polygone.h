@@ -31,6 +31,9 @@ public:
     // + setSommets(Vector<Point2D<T>> listeSommets) : void
     void setSommets(const std::vector<Point2D<T>>& listeSommets);
 
+    // + getSurface() : float (nous utiliserons double pour plus de précision)
+    double getSurface() const;
+
     // + addPoint(Point2D<T> p) : void
     void addPoint(const Point2D<T>& p);
 
