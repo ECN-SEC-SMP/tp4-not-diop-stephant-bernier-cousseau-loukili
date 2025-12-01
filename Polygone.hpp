@@ -1,7 +1,7 @@
 #ifndef POLYGONE_H
 #define POLYGONE_H
 #include <vector>
-#include "Point2D.h" 
+#include "Point2D.hpp" 
 
 /**
  * @class Polygone
