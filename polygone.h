@@ -40,6 +40,7 @@ public:
 };
 
 // Inclusion de l'implémentation (méthodes) pour les templates
+// C'est une méthode courante pour contourner les problèmes de liaison.
 #include "Polygone.cpp"
 
 #endif // POLYGONE_H
