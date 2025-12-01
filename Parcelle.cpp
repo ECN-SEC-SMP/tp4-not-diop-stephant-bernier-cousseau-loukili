@@ -1,6 +1,6 @@
 #include "Parcelle.hpp"
 
-Parcelle::Parcelle(int numero, std::string proprietaire, Polygone<int, float> forme) {
+Parcelle::Parcelle(int numero, std::string proprietaire, Polygone<int> forme) {
     this->numero = numero;
     this->proprietaire = proprietaire;
     setForme(forme);
@@ -14,10 +14,10 @@ std::string Parcelle::getProprietaire() {
     return proprietaire;
 }
 float Parcelle::getSurface() {
-    return surface;
+    return forme.surface();
 }
 
-const Polygone<int, float>& Parcelle::getForme() const {
+const Polygone<int>& Parcelle::getForme() const {
     return forme;
 }
 
@@ -29,7 +29,6 @@ void Parcelle::setProprietaire(std::string proprietaire) {
     this->proprietaire = proprietaire;
 }
 
-void Parcelle::setForme(Polygone<int, float> forme) {
+void Parcelle::setForme(Polygone<int> forme) {
     this->forme = forme;
-    this->surface = forme.getSurface();
 }
