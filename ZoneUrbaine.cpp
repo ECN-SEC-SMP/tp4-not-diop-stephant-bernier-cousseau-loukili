@@ -1,22 +1,39 @@
-// Bibliothèques
+///
+/// @brief Bibliothèques
+/// @details Nécéssaires pour le bon focntionnement du projet.
+///
 #include "ZoneUrbaine.hpp"
 #include "Polygone.hpp"
+#include "Parcelle.hpp"
 
-// Classe zone urbaine (ZU). Une ZU est une parcelle déjà parteillement (ou totalement) construite.
-ZoneUrbaine::ZoneUrbaine(string nom, string nom_fichier) : Parcelle(int num, string prop, Polygone<int, float> forme)
+
+///
+/// @brief Création d'une zone urbaine
+/// @details Création d'une zone urbaine, en fonction de la surface déjà construite
+/// @param[in]  surfaceConstruite float
+///
+ZoneUrbaine::ZoneUrbaine(float surfaceConstruite)
 {
-    // Paramètres
-    float surfaceConstruite;
+    this->surfaceConstruite = surfaceConstruite;
+}
 
-    // Constructeurs
-    ZoneUrbaine();
+///
+/// @brief Accesseurs
+/// @details Fonctions permettant l'accès aux différents paramètres d'une zone urbaine. 
+///
+float ZoneUrbaine::getSurfaceConstruite() const { return this->surfaceConstruite; }
 
-    // Accesseurs
-    getSurfaceConstruite() { return this->surfaceConstruite; }
+///
+/// @brief Mutateurs
+/// @details Fonctions permettant la modification des différents paramètres d'une zone. 
+///
+void setSurfaceConstruite(float surface) { this->surfaceConstruite = surface; }
 
-    // Mutateurs
-    setSurfaceConstruite(float surface) { this->surfaceConstruite = surface; }
-
-    // Méthodes
-    float SurfaceConstructible(float surface);
+///
+/// @brief Méthode, surface contruite
+/// @details Fonctions permettant de déterminer la surface constructible de la zone, renvoie la surface restante disponible pour la construction.
+/// @param[in] surface float
+///
+float SurfaceConstructible(float surface) {
+    return ;
 }
