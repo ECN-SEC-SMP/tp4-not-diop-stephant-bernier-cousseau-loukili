@@ -3,7 +3,6 @@
 #include <cmath> // Pour std::abs
 
 // Constructeurs
-
 // + Polygone()
 template <typename T>
 Polygone<T>::Polygone() : sommets() {}
