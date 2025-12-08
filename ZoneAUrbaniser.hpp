@@ -19,6 +19,9 @@ public:
 
     // Méthodes
     float SurfaceConstructible(ZoneUrbaine zone);
+
+    // Surcharge
+    friend std::ostream& operator<<(std::ostream& os, ZoneAUrbaniser const& z);    // Opérateur <<
 };
 
 #endif

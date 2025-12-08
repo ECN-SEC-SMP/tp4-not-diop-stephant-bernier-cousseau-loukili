@@ -50,6 +50,11 @@ float ZoneUrbaine::SurfaceConstructible(Polygone<int> zone)
     return surfaceConstructible;
 }
 
+///
+/// @brief Surchage <<
+/// @details Surcharge de l'opérateur << pour l'affichage des informations d'une zone urbaine.
+/// @param[in] z ZoneUrbaine
+///
 std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z)
 {
     float surfaceTotale = z.getForme().getSurface();

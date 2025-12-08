@@ -5,7 +5,6 @@ project(TP4) #Modify this
 set (CMAKE_CXX_STANDARD 14) #Set CPP standard
 
 set(SOURCE_FILES    main.cpp
-                    Constructible.cpp
                     Parcelle.cpp
                     Point2D.cpp
                     ZoneAgricole.cpp
