@@ -53,7 +53,7 @@ void ZoneAgricole::construireBatiment()
     std::cout << "Quelle est la surface du batiment que vous souhaitez construire ?";
     std::cin >> surface_bat;
 
-    if (surface_bat + surfaceConstruite <= std::min(0.1 * surface_zone, 200))
+    if ((surface_bat + surfaceConstruite) <= std::min (0.1 * surface_zone, 200))
     {
         std::cout << "construction OK";
     }

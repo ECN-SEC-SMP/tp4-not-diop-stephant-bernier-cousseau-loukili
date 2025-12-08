@@ -6,14 +6,14 @@ Parcelle::Parcelle(int numero, std::string proprietaire, Polygone<int> forme) {
     setForme(forme);
 }
 
-int Parcelle::getNumero() {
+int Parcelle::getNumero() const{
     return numero;
 }
 
-std::string Parcelle::getProprietaire() {
+std::string Parcelle::getProprietaire() const{
     return proprietaire;
 }
-float Parcelle::getSurface() {
+float Parcelle::getSurface() const{
     return forme.getSurface();
 }
 
