@@ -1,3 +1,4 @@
+#include <ostream>
 #include "ZoneUrbaine.hpp"
 
 #ifndef ZONEAURBANISER_HPP
@@ -10,7 +11,7 @@ public:
     // Paramètres
 
     // Constructeurs
-    ZoneAUrbaniser(ZoneUrbaine zone);
+    ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite, ZoneUrbaine zone);
 
     // Accesseurs
 

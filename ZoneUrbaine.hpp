@@ -1,3 +1,4 @@
+#include <ostream>
 #include "Polygone.hpp"
 #include "Constructible.h"
 #include "Parcelle.hpp"
@@ -13,8 +14,8 @@ public:
     float surfaceConstruite;
 
     // Constructeurs
-    ZoneUrbaine(Polygone zone);
-    ZoneUrbaine(float surfaceConstruite);
+    ZoneUrbaine(int numero, std::string proprietaire, Polygone<int> forme);
+    ZoneUrbaine(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite);
 
     // Accesseurs
     float getSurfaceConstruite() const; 
@@ -23,7 +24,10 @@ public:
     void setSurfaceConstruite(float surface);
 
     // Méthodes
-    float SurfaceConstructible(Polygone zone);
+    float SurfaceConstructible(Polygone<int> zone);
+
+    // Surcharge
+    friend std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z);    // Opérateur <<
 };
 
 #endif
