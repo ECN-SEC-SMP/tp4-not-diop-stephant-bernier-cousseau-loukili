@@ -3,7 +3,7 @@
 
 /// @brief Constructeur par défaut
 /// @details valeurs par défaut des attributs
-ZoneAgricole::ZoneAgricole(){
+ZoneAgricole::ZoneAgricole(int ZN_numero, std::string &ZN_proprietaire, Polygone<int> forme):ZoneNaturelle(ZN_numero, ZN_proprietaire, forme){
     surfaceConstruite = 0; // Pour la règle des 10% et du 200m²
     typeParcelle = "ZA";
     typeCulture = " ";
@@ -11,7 +11,9 @@ ZoneAgricole::ZoneAgricole(){
 
 /// @brief Constructeur avec un param
 /// @details valeur du type de culture
-ZoneAgricole::ZoneAgricole(std::string culture) : typeCulture(culture) {}
+ZoneAgricole::ZoneAgricole(int ZN_numero, std::string &ZN_proprietaire, Polygone<int> forme, std::string culture) : ZoneNaturelle(ZN_numero, ZN_proprietaire, forme) {
+    typeCulture = culture;
+}
 
 /// @brief getter
 /// @details valeur du type de culture

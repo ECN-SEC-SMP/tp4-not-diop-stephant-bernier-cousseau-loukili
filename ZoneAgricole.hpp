@@ -13,8 +13,8 @@ private:
     float surfaceConstruite; //surface construite en m²
     std::string typeParcelle;
 public:
-    ZoneAgricole();
-    ZoneAgricole(std::string culture);
+    ZoneAgricole(int ZN_numero, std::string &ZN_proprietaire, Polygone<int> forme);
+    ZoneAgricole(int ZN_numero, std::string &ZN_proprietaire, Polygone<int> forme, std::string culture);
 
     //getter
     std::string getTypeCulture() const ;
