@@ -8,7 +8,7 @@
 /// @brief Création d'une zone à urbaniser
 /// @details Création d'une zone à urbaniser
 ///
-ZoneAUrbaniser::ZoneAUrbaniser(ZoneUrbaine zone)
+ZoneAUrbaniser::ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite, ZoneUrbaine zone) : ZoneUrbaine(numero, proprietaire, forme, surfaceConstruite)
 {
     zone.setSurfaceConstruite(0);
 }

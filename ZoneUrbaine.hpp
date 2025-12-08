@@ -13,8 +13,8 @@ public:
     float surfaceConstruite;
 
     // Constructeurs
-    ZoneUrbaine(Polygone zone);
-    ZoneUrbaine(float surfaceConstruite);
+    ZoneUrbaine(int numero, std::string proprietaire, Polygone<int> forme);
+    ZoneUrbaine(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite);
 
     // Accesseurs
     float getSurfaceConstruite() const; 
@@ -23,7 +23,7 @@ public:
     void setSurfaceConstruite(float surface);
 
     // Méthodes
-    float SurfaceConstructible(Polygone zone);
+    float SurfaceConstructible(Polygone<int> zone);
 };
 
 #endif
