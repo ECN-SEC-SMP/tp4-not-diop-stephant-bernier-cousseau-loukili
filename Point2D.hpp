@@ -56,8 +56,8 @@ Point2D<T>::Point2D(T x, T y) {}
 
 template <typename T>
 Point2D<T>::Point2D(Point2D<T>& p) {
-    this->x = p->x;
-    this->y = p->y;
+    this->x = p.x;
+    this->y = p.y;
 }
 
 template <typename T>
@@ -71,8 +71,8 @@ T Point2D<T>::getY( ) {
 }
 
 template <typename T>
-void Point2D<T>::setX(T y) {
-    this->x = y;
+void Point2D<T>::setX(T x) {
+    this->x = x;
 }
 
 template <typename T>
