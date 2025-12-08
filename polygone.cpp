@@ -1,4 +1,4 @@
-#include "Polygone.h"
+#include "polygone.h"
 #include <iostream>
 #include <cmath> // Pour std::abs
 
@@ -7,7 +7,7 @@
 template <typename T>
 Polygone<T>::Polygone() : sommets() {}
 
-// + Polygone(Vector<Point2D<T>> listeSommets)
+// + Polygone(Vectors<Point2D<T>> listeSommets)
 template <typename T>
 Polygone<T>::Polygone(const std::vector<Point2D<T>>& listeSommets) {
     this->sommets = listeSommets; // Copie des Point2D
