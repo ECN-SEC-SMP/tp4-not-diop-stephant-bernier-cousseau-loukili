@@ -27,21 +27,21 @@ public:
      * 
      * @return int Numéro de la parcelle
      */
-    int getNumero();
+    int getNumero()const ;
 
     /**
      * @brief Accesseur pour le nom du propriétaire
      * 
      * @return std::string Nom du propriétaire
      */
-    std::string getProprietaire();
+    std::string getProprietaire()const ;
 
     /**
      * @brief Accesseur pour la surface de la parcelle
      * 
      * @return float Surface de la parcelle
      */
-    float getSurface();
+    float getSurface()const;
 
     /**
      * @brief Accesseur de la forme de la parcelle
