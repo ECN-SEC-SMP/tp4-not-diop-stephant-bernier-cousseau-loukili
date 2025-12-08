@@ -1,14 +1,42 @@
+#pragma once
 #include <iostream>
-using namespace std;
+#include <string>
 
 #include "ZoneNaturelle.h"
-#include "Constructible.h"
 
-//la classe ZoneAgricole hérite de la classe ZoneNaturelle
-class ZoneAgricole:public ZoneNaturelle, public Coonstructible{
-    private:
-    string typeCulture; //type de culture (céréales, légumes, etc.)
+///
+/// @brief classe ZoneAgricole, fille de la classe ZoneNanturelle
+class ZoneAgricole : public ZoneNaturelle
+{
+private:
+    std::string typeCulture; // type de culture (céréales, légumes, etc.)
+    float surfaceConstruite; //surface construite en m²
+    std::string typeParcelle;
+public:
+    ZoneAgricole();
+    ZoneAgricole(std::string culture);
 
-    public:
-    //constructeur
+    //getter
+    std::string getTypeCulture() const ;
+    float getSurfaceConstruite() const;
+
+    //setter
+    void setTypeCulture(std::string &culture);
+    void setSurfaceConstruite(float &aire);
+
+    // construire une zone agricole
+    void construireBatiment();
+
+    // surcharge opérateur pour le display
+    friend std::ostream &operator<<(std::ostream &os, const ZoneAgricole &ZA)
+    {
+        os << "Parcelle n: " << ZA.getNumero() << '\n';
+        os << "Type: " << ZA.getType() << '\n';
+        os << "Polygone: " << ZA.getForme() << '\n';
+        os << "Propriétaire: " << ZA.getProprietaire() << '\n';
+        os << "Surface: " << ZA.getSurface()<<'\n';
+        os<< "TypeCulture: "<<ZA.getTypeCulture()<<'\n';
+
+        return os;
+    }
 };
