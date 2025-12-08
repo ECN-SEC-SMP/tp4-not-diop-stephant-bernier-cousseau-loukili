@@ -40,6 +40,15 @@ public:
     // --- Méthode de Transformation ---
     // + translate(T x, T y) : void
     void translate(T dx, T dy);
+
+        // surcharge opérateur pour le display
+    friend std::ostream &operator<<(std::ostream &os,const Polygone &poly)
+    {
+        os <<"Polygone: "<<poly.getSommets()<<'\n';
+        os <<" Surface: "<<poly.getSurface()<<'\n';
+
+        return os;
+    }
 };
 
 // Inclusion de l'implémentation (méthodes) pour les templates

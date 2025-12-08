@@ -1,10 +1,9 @@
 #include <algorithm>
-#include "ZoneAgricole.h"
+#include "ZoneAgricole.hpp"
 
 /// @brief Constructeur par défaut
 /// @details valeurs par défaut des attributs
-ZoneAgricole::ZoneAgricole()
-{
+ZoneAgricole::ZoneAgricole(){
     surfaceConstruite = 0; // Pour la règle des 10% et du 200m²
     typeParcelle = "ZA";
     typeCulture = " ";
@@ -53,7 +52,7 @@ void ZoneAgricole::construireBatiment()
     std::cout << "Quelle est la surface du batiment que vous souhaitez construire ?";
     std::cin >> surface_bat;
 
-    if ((surface_bat + surfaceConstruite) <= std::min (0.1 * surface_zone, 200))
+    if ((surface_bat + surfaceConstruite) <= std::min (int(0.1 * surface_zone), 200))
     {
         std::cout << "construction OK";
     }
