@@ -3,6 +3,7 @@
 using namespace std;
 #include "Constructible.h"
 
+
 //definition de la fonction CalculSurface
 float Constructible::CalculSurface(Polygone<float> forme){
     sommets= forme.getSommets( ) ;//je récupère les sommets du polyhone depuis la classe Polygone
