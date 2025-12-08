@@ -2,6 +2,7 @@
 /// @brief Bibliothèques
 /// @details Nécéssaires pour le bon focntionnement du projet.
 ///
+#include <ostream>
 #include "ZoneAUrbaniser.hpp"
 #include "ZoneUrbaine.hpp"
 ///

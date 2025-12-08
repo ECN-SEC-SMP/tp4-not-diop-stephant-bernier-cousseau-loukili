@@ -1,3 +1,4 @@
+#include <ostream>
 #include "ZoneUrbaine.hpp"
 
 #ifndef ZONEAURBANISER_HPP

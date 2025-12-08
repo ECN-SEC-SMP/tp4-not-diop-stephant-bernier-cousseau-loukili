@@ -1,3 +1,4 @@
+#include <ostream>
 #include "Polygone.hpp"
 #include "Constructible.h"
 #include "Parcelle.hpp"
@@ -24,6 +25,9 @@ public:
 
     // Méthodes
     float SurfaceConstructible(Polygone<int> zone);
+
+    // Surcharge
+    friend std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z);    // Opérateur <<
 };
 
 #endif

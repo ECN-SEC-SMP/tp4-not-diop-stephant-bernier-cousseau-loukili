@@ -2,6 +2,7 @@
 /// @brief Bibliothèques
 /// @details Nécéssaires pour le bon focntionnement du projet.
 ///
+#include <ostream>
 #include "ZoneUrbaine.hpp"
 #include "Polygone.hpp"
 #include "Parcelle.hpp"
@@ -47,4 +48,17 @@ float ZoneUrbaine::SurfaceConstructible(Polygone<int> zone)
 {
     float surfaceConstructible = zone.getSurface() - this->surfaceConstruite;
     return surfaceConstructible;
+}
+
+std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z)
+{
+    float surfaceTotale = z.getForme().getSurface();
+    float surfaceConstruite = z.getSurfaceConstruite();
+    os << "Parcelle n°" << z.getNumero() << " :" << "\n";
+    os << "     Type : Zone Urbaine \n";
+    os << "     Propriétaire: " << z.getProprietaire() << "\n";
+    os << "     Surface totale: " << surfaceTotale << "\n";
+    os << "     Surface construite: " << surfaceConstruite << "\n";
+    os << "     Surface constructible: " << (surfaceTotale - surfaceConstruite) << "\n";
+    return os;
 }
