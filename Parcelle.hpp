@@ -1,5 +1,6 @@
 #pragma once
 
+#include <ostream>
 #include <string>
 
 #include "Polygone.hpp"
@@ -70,4 +71,13 @@ public:
      * @param forme Nouvelle forme de la parcelle
      */
     void setForme(Polygone<int> forme);
+
+    /**
+     * @brief Fonction d'indirection pour pouvoir utiliser l'opérateur << sur Parcelle
+     * 
+     * @param os Stream de sortie
+     */
+    virtual void print(std::ostream& os) const = 0;
+
+    friend std::ostream& operator<<(std::ostream &os,const Parcelle* p);
 };

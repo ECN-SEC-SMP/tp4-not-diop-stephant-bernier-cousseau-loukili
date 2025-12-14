@@ -32,3 +32,8 @@ void Parcelle::setProprietaire(std::string proprietaire) {
 void Parcelle::setForme(Polygone<int> forme) {
     this->forme = forme;
 }
+
+std::ostream& operator<<(std::ostream &os,const Parcelle* p) {
+    p->print(os);
+    return os;
+}

@@ -15,15 +15,12 @@ public:
         return "ZN";
     }
 
-    // surcharge opérateur pour le display
-    friend std::ostream &operator<<(std::ostream &os,const ZoneNaturelle &ZN)
+    void print(std::ostream& os) const override    // Indirection pour l'opérateur <<
     {
-        os << "Parcelle n: " <<  ZN.getNumero() << '\n';
-        os << "Type: " << ZN.getType() << '\n';
-        os << "Polygone: " << ZN.getForme() << '\n';
-        os << "Propriétaire: " << ZN.getProprietaire() << '\n';
-        os << "Surface: " << ZN.getSurface();
-
-        return os;
+        os << "Parcelle n: " <<  getNumero() << '\n';
+        os << "Type: " << getType() << '\n';
+        os << "Polygone: " << getForme() << '\n';
+        os << "Propriétaire: " << getProprietaire() << '\n';
+        os << "Surface: " << getSurface();
     }
 };

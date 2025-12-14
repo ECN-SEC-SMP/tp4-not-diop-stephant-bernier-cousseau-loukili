@@ -28,15 +28,13 @@ public:
     void construireBatiment();
 
     // surcharge opérateur pour le display
-    friend std::ostream &operator<<(std::ostream &os, const ZoneAgricole &ZA)
+    void print(std::ostream& os) const // Indirection pour l'opérateur <<
     {
-        os << "Parcelle n: " << ZA.getNumero() << '\n';
-        os << "Type: " << ZA.getType() << '\n';
-        os << "Polygone: " << ZA.getForme() << '\n';
-        os << "Propriétaire: " << ZA.getProprietaire() << '\n';
-        os << "Surface: " << ZA.getSurface()<<'\n';
-        os<< "TypeCulture: "<<ZA.getTypeCulture()<<'\n';
-
-        return os;
+        os << "Parcelle n: " << getNumero() << '\n';
+        os << "Type: " << getType() << '\n';
+        os << "Polygone: " << getForme() << '\n';
+        os << "Propriétaire: " << getProprietaire() << '\n';
+        os << "Surface: " << getSurface()<<'\n';
+        os<< "TypeCulture: "<< getTypeCulture()<<'\n';
     }
 };

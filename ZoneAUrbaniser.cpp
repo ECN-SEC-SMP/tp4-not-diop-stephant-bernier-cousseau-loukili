@@ -29,14 +29,13 @@ float ZoneAUrbaniser::surfaceConstructible()
 /// @details Surcharge de l'opérateur << pour l'affichage des informations d'une zone à urbaniser.
 /// @param[in] z ZoneUrbaine
 ///
-std::ostream& operator<<(std::ostream& os, ZoneAUrbaniser const& z)
+void ZoneAUrbaniser::print(std::ostream& os) const
 {
-    float surfaceTotale = z.getForme().getSurface();
-    float surfaceConstruite = z.getSurfaceConstruite();
-    os << "Parcelle n°" << z.getNumero() << " :" << "\n";
+    float surfaceTotale = getForme().getSurface();
+    float surfaceConstruite = getSurfaceConstruite();
+    os << "Parcelle n°" << getNumero() << " :" << "\n";
     os << "     Type : Zone à urbaniser \n";
-    os << "     Propriétaire: " << z.getProprietaire() << "\n";
+    os << "     Propriétaire: " << getProprietaire() << "\n";
     os << "     Surface totale: " << surfaceTotale << "\n";
     os << "     Surface constructible: " << (surfaceTotale - surfaceConstruite) << "\n";
-    return os;
 }

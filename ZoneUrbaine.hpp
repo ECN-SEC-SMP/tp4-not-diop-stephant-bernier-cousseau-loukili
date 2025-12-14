@@ -27,7 +27,7 @@ public:
     float surfaceConstructible() override;
 
     // Surcharge
-    friend std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z);    // Opérateur <<
+    void print(std::ostream& os) const override;    // Indirection pour l'opérateur <<
 };
 
 #endif
