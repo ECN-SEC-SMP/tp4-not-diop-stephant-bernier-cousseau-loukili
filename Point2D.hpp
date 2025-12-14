@@ -60,7 +60,10 @@ class Point2D {
 };
 
 template <typename T>
-Point2D<T>::Point2D(T x, T y) {}
+Point2D<T>::Point2D(T x, T y) {
+    this->x = x;
+    this->y = y;
+}
 
 template <typename T>
 Point2D<T>::Point2D(const Point2D<T>& p) {
