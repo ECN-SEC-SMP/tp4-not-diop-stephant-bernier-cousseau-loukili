@@ -56,10 +56,15 @@ Polygone<int> readPolygon(std::string& polygon) {
 
     while(std::getline(iss, currentPoint, ' ')) {
         if(currentPoint[0] != '[') {
+            std::cout << "Current line: " << polygon << std::endl;
+            std::cout << "Malformed point: " << currentPoint << std::endl;
+            std::cout << "Vérifier que le fichier utilise des fin de lignes Linux et non Windows" << std::endl;
             throw MalformatedMapData();
         }
 
         if(currentPoint[currentPoint.length()-1] != ']') {
+            std::cout << "Malformed point: " << currentPoint << std::endl;
+            std::cout << "Vérifier que le fichier utilise des fin de lignes Linux et non Windows" << std::endl;
             throw MalformatedMapData();
         }
         
