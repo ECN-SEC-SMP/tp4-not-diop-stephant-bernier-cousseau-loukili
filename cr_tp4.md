@@ -85,6 +85,8 @@ L'intégration de la génération de documentation a été ajoutée au `CMakeLis
 Cependant la présence de Doxygen sur le système est tout à fait optionnelle. En effet, si Doxygen n'est pas détecté l'étape de génération de la documentation sera simplement sautée.
 
 ---
+## Classe Point2D
+La classe Point2D (template) représente un point 2D avec des coordonnées x et y de n’importe quel type (int, float, double, etc.) et a une fonctionnalité de translation possible.
 
 ## Classe `Parcelle
 
