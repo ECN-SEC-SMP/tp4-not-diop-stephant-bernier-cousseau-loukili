@@ -10,6 +10,7 @@ set(SOURCE_FILES    main.cpp
                     ZoneAgricole.cpp
                     ZoneAUrbaniser.cpp
                     ZoneUrbaine.cpp
+                    Carte.cpp
                     ) #Add source files here
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
