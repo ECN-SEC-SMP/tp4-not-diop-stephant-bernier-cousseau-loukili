@@ -1,24 +1,25 @@
-#include <ostream>
-#include "ZoneUrbaine.hpp"
-
 #ifndef ZONEAURBANISER_HPP
 #define ZONEAURBANISER_HPP
+
+#include <ostream>
+#include "ZoneUrbaine.hpp"
 
 // Classe zone urbaine (ZU). Une ZU est une parcelle déjà parteillement (ou totalement) construite.
 class ZoneAUrbaniser : public ZoneUrbaine
 {
+private:
+    float constructible = 0;
 public:
-    // Paramètres
 
     // Constructeurs
-    ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite, ZoneUrbaine zone);
+    ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstructible);
 
     // Accesseurs
 
     // Mutateurs
 
     // Méthodes
-    float SurfaceConstructible(ZoneUrbaine zone);
+    float surfaceConstructible() override;
 
     // Surcharge
     friend std::ostream& operator<<(std::ostream& os, ZoneAUrbaniser const& z);    // Opérateur <<

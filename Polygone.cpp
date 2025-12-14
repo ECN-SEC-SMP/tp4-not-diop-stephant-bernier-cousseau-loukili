@@ -3,7 +3,6 @@
 /// @details Nécéssaires pour le bon focntionnement du projet.
 ///
 #include "Polygone.hpp"
-#include <iostream>
 #include <cmath> // Pour std::abs
 
 // Constructeurs

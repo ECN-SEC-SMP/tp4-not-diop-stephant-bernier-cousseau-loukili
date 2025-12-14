@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 template <typename T>
 class Point2D {
     private :
@@ -22,17 +24,17 @@ class Point2D {
          * @brief constructeur 
          * 
          */
-        Point2D(Point2D<T>& p) ;
+        Point2D(const Point2D<T>& p) ;
         /**
          * @brief Accesseur pour la coordonnée x
          * @return T 
          */
-        T getX( ) ;
+        T getX( ) const;
         /**
          * @brief Accesseur pour la coordonnée y
          * @return T 
          */
-        T getY( ) ;
+        T getY( ) const;
         /**
          * @brief Mutateur pour la coordonnée x
          * @param y 
@@ -49,24 +51,30 @@ class Point2D {
          * @param y 
          */
         void translate(T x, T y) ;
+
+        friend std::ostream& operator<<(std::ostream &os,const Point2D<T> &p)
+        {
+            os << "X = " << p.x << " Y = " << p.y;
+            return os;
+        }
 };
 
 template <typename T>
 Point2D<T>::Point2D(T x, T y) {}
 
 template <typename T>
-Point2D<T>::Point2D(Point2D<T>& p) {
+Point2D<T>::Point2D(const Point2D<T>& p) {
     this->x = p.x;
     this->y = p.y;
 }
 
 template <typename T>
-T Point2D<T>::getX( ) {
+T Point2D<T>::getX( ) const{
     return this->x;
 }
 
 template <typename T>
-T Point2D<T>::getY( ) {
+T Point2D<T>::getY( ) const{
     return this->y;
 }
 

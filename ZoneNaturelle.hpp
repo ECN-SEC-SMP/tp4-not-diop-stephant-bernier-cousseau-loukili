@@ -8,9 +8,6 @@
 /// @brief classe ZoneNaturelle, fille de la classe Parcelle
 class ZoneNaturelle : public Parcelle
 {
-private:
-    std::string typeParcelle;
-
 public:
     ZoneNaturelle(int ZN_numero, std::string &ZN_proprietaire, Polygone<int> forme): Parcelle(ZN_numero, ZN_proprietaire, forme){};
 

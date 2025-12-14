@@ -44,9 +44,9 @@ void ZoneUrbaine::setSurfaceConstruite(float surface) { this->surfaceConstruite 
 /// @details Fonctions permettant de déterminer la surface constructible de la zone, renvoie la surface restante disponible pour la construction.
 /// @param[in] surface Parcelle
 ///
-float ZoneUrbaine::SurfaceConstructible(Polygone<int> zone)
+float ZoneUrbaine::surfaceConstructible()
 {
-    float surfaceConstructible = zone.getSurface() - this->surfaceConstruite;
+    float surfaceConstructible = getSurface() - this->surfaceConstruite;
     return surfaceConstructible;
 }
 

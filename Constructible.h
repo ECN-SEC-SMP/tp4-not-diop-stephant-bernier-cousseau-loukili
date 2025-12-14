@@ -1,6 +1,4 @@
-#include <iostream>
-#include "Polygone.hpp"
-
+#pragma once
 
 class Constructible {
     private: 

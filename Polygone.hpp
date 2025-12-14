@@ -1,6 +1,7 @@
 #ifndef POLYGONE_H
 #define POLYGONE_H
 #include <vector>
+#include <iostream>
 #include "Point2D.hpp" 
 
 /**
@@ -42,9 +43,11 @@ public:
     void translate(T dx, T dy);
 
         // surcharge opérateur pour le display
-    friend std::ostream &operator<<(std::ostream &os,const Polygone &poly)
+    friend std::ostream& operator<<(std::ostream &os,const Polygone &poly)
     {
-        os <<"Polygone: "<<poly.getSommets()<<'\n';
+        for (auto& point : poly.getSommets()) {
+            os << point << std::endl;
+        }
         os <<" Surface: "<<poly.getSurface()<<'\n';
 
         return os;

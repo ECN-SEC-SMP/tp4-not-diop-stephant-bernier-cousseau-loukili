@@ -24,7 +24,7 @@ public:
     void setSurfaceConstruite(float surface);
 
     // Méthodes
-    float SurfaceConstructible(Polygone<int> zone);
+    float surfaceConstructible() override;
 
     // Surcharge
     friend std::ostream& operator<<(std::ostream& os, ZoneUrbaine const& z);    // Opérateur <<

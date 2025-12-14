@@ -9,9 +9,9 @@
 /// @brief Création d'une zone à urbaniser
 /// @details Création d'une zone à urbaniser
 ///
-ZoneAUrbaniser::ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstruite, ZoneUrbaine zone) : ZoneUrbaine(numero, proprietaire, forme, surfaceConstruite)
+ZoneAUrbaniser::ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<int> forme,float surfaceConstructible) : ZoneUrbaine(numero, proprietaire, forme, 0)
 {
-    zone.setSurfaceConstruite(0);
+    constructible = surfaceConstructible;
 }
 
 ///
@@ -19,9 +19,9 @@ ZoneAUrbaniser::ZoneAUrbaniser(int numero, std::string proprietaire, Polygone<in
 /// @details Fonctions permettant de déterminer la surface constructible de la zone, renvoie la surface restante disponible pour la construction.
 /// @param[in] zone Parcelle
 ///
-float ZoneAUrbaniser::SurfaceConstructible(ZoneUrbaine zone)
+float ZoneAUrbaniser::surfaceConstructible()
 {
-    return zone.getSurface();
+    return constructible;
 }
 
 ///
