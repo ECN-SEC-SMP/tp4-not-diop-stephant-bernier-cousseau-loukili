@@ -1,0 +1,77 @@
+@startuml TP4_UML_Impl
+
+class "Point2D<T>" {
+    - T x
+    - T y
+    + getX() : T
+    + getY() : T
+    + translate(T x, T y) : void
+}
+
+class "Polygone<T>" {
+    - std::vector<Point2D<T>> sommets
+    + getSurface() : double
+    + addPoint(const Point2D<T>&) : void
+    + translate(T dx, T dy) : void
+}
+
+"Polygone<T>" *-- "Point2D<T>" : sommets
+
+class "Polygone<int>" as PolygoneInt {}
+
+abstract class Constructible {
+    + {abstract} surfaceConstructible() : float
+}
+
+class Parcelle {
+    - int numero
+    - std::string proprietaire
+    - PolygoneInt forme
+    + getSurface() : float
+    + getForme() : const PolygoneInt&
+    # Parcelle(int, std::string, PolygoneInt)
+}
+
+Parcelle "1" *-- "1" PolygoneInt : forme
+
+
+class ZoneNaturelle {
+    + getType() : std::string
+    + print(std::ostream& os) : void
+}
+Parcelle <|-- ZoneNaturelle
+
+class ZoneUrbaine {
+    + float surfaceConstruite
+    + getSurfaceConstruite() : float
+    + surfaceConstructible() : float
+    + print(std::ostream& os) : void
+}
+Parcelle <|-- ZoneUrbaine
+Constructible <|.. ZoneUrbaine
+
+class ZoneAgricole {
+    - float surfaceConstruite
+    - std::string typeCulture
+    + construireBatiment() : void
+    + print(std::ostream& os) : void
+}
+ZoneNaturelle <|-- ZoneAgricole
+
+class ZoneAUrbaniser {
+    - float constructible
+    + surfaceConstructible() : float
+    + print(std::ostream& os) : void
+}
+ZoneUrbaine <|-- ZoneAUrbaniser
+
+class Carte {
+    - std::vector<Parcelle*> listeParcelles
+    + Carte(std::string& nomFichier)
+    + ajouterParcelle(Parcelle* parcelle) : void
+    + afficher() : void
+    + surfaceTotale() : float
+}
+Carte "1" o-- "*" Parcelle : contient
+
+@enduml

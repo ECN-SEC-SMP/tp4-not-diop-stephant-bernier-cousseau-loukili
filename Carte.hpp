@@ -43,5 +43,15 @@ public:
      * @param parcelle 
      */
     void retirerParcelle(Parcelle* parcelle);
+    /**
+     * @brief Affiche chaque parcelle
+     * 
+     */
     void afficher();
+    /**
+     * @brief Calcule la surface totale des zones de la carte
+     * 
+     * @return float Surface totale
+     */
+    float surfaceTotale();
 };

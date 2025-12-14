@@ -186,3 +186,12 @@ void Carte::afficher() {
         std::cout << parcelle << std::endl;
     }
 }
+
+float Carte::surfaceTotale() {
+    float resultat = 0;
+    for (auto parcelle : listeParcelles) {
+        resultat += parcelle->getSurface();
+    }
+
+    return resultat;
+}
