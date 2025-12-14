@@ -16,4 +16,6 @@ int main(int argc, char** argv)
     Carte carte(fichier);
 
     carte.afficher();
+
+    std::cout << "Surface totale de la carte : " << carte.surfaceTotale() << std::endl;
 }
